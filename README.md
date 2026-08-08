@@ -1,17 +1,17 @@
-# SHOPEZ : E-Commerce Application
+# ZENITH : Modern Commerce Application
 
-**Retail individual ShopEZ is your one-stop destination for effortless online shopping.** Designed and implemented with clean MERN Stack architecture (MongoDB, Express, React Vite, Node.js) and modern **Glassmorphism UI** visual design aesthetics.
+**Retail individual Zenith is your one-stop destination for effortless online shopping.** Designed and implemented with clean MERN Stack architecture (MongoDB, Express, React Vite, Node.js) and modern **Clean Minimalist UI** visual design aesthetics.
 
 ---
 
 ## DEMO AND GITHUB REPOSITORY LINKS
 
 > [!IMPORTANT]
-> - 🌐 **Live Vercel Frontend**: [https://e-com-cyan-gamma.vercel.app/](https://e-com-cyan-gamma.vercel.app/)
-> - ⚡ **Live Render Backend API**: [https://e-com-server-xain.onrender.com](https://e-com-server-xain.onrender.com)
-> - 📦 **GitHub Repository**: [https://github.com/siva7777777v-rg/e-com](https://github.com/siva7777777v-rg/e-com)
-> - 🎥 **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/15OkkJrmNhpTcmPB0hSifUTqJ_jHjAtX3?usp=sharing)
-> - 📄 **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1F9opAm4vu4nvSzHU9jGPpcvPUk9ewmaq?usp=sharing)
+> - 🌐 **Live Vercel Frontend**: [https://e-com-bgo7.vercel.app/](https://e-com-bgo7.vercel.app/)
+> - ⚡ **Live Render Backend API**: [https://e-com-1-gdm0.onrender.com](https://e-com-1-gdm0.onrender.com)
+> - 📦 **GitHub Repository**: [https://github.com/sasikumar-s123/e_COM](https://github.com/sasikumar-s123/e_COM)
+> - 🎥 **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/1KBvzwgmPf9r4ex1wnLu63SWjRo4gICnr?usp=sharing)
+> - 📄 **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1Ath3eQR4S7maZEvpSINzaMmM6R4bwApG?usp=sharing)
 > - 🔑 **Pre-configured Admin Account**:
 >   - **Account Email**: `admin@gmail.com`
 >   - **Password**: `admin123`
@@ -29,7 +29,7 @@ The application follows a decoupled client-server architecture:
 +-----------------------------------------------------------------------------------+
 |                                 FRONTEND LAYER                                   |
 |  - React 18 (Vite)                                                                |
-|  - Glassmorphism Design Tokens & Vanilla CSS System                               |
+|  - Clean Minimalist Design Tokens & Vanilla CSS System                            |
 |  - Context API (AuthContext, CartContext)                                         |
 |  - React Router DOM Navigation                                                    |
 |  - Pages: Home, Catalog, Product Detail, Cart/Checkout, Profile, Admin Portal     |
@@ -160,7 +160,7 @@ erDiagram
 ### MVC PATTERN EXPLANATION
 
 - **Model Layer (`server/models/`)**: Mongoose models defining schemas for `User.js`, `Product.js`, `Cart.js`, and `Order.js`.
-- **View Layer (`client/src/`)**: Dynamic React components rendered with glassmorphism CSS backdrop filters, responsive grid structures, and interactive states.
+- **View Layer (`client/src/`)**: Dynamic React components rendered with clean minimalist CSS properties, responsive grid structures, and interactive states.
 - **Controller Layer (`server/controllers/`)**: Business logic processing requests, performing database CRUD operations, and returning structured JSON API payloads.
 
 ---
@@ -208,14 +208,14 @@ npm run seed
 
 ## 4. DATABASE DEVELOPMENT (MongoDB)
 
-- **MongoDB URI**: `mongodb://127.0.0.1:27017/shopez`
+- **MongoDB URI**: `mongodb://127.0.0.1:27017/zenith`
 - Database connector: `server/config/db.js` using Mongoose ORM.
 
 ---
 
 ## 5. FRONTEND DEVELOPMENT
 
-Built with React 18, Vite, Lucide Icons, and Vanilla CSS styled with **Glassmorphism Design System** (`glass-panel`, `glass-card`, `glass-nav`, backdrop blurs, glow borders, and responsive flex/grid layouts).
+Built with React 18, Vite, Lucide Icons, and Vanilla CSS styled with **Clean Minimalist Design System** (`panel`, `card`, `nav`, solid colors, subtle shadows, and responsive flex/grid layouts).
 
 ---
 
@@ -240,11 +240,11 @@ npm run dev
 
 ## DEMO & EVALUATION LINKS SUMMARY
 
-- **Live Vercel Frontend**: [https://e-com-cyan-gamma.vercel.app/](https://e-com-cyan-gamma.vercel.app/)
-- **Live Render Backend API**: [https://e-com-server-xain.onrender.com](https://e-com-server-xain.onrender.com)
-- **GitHub Repository**: [https://github.com/siva7777777v-rg/e-com](https://github.com/siva7777777v-rg/e-com)
-- **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/15OkkJrmNhpTcmPB0hSifUTqJ_jHjAtX3?usp=sharing)
-- **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1F9opAm4vu4nvSzHU9jGPpcvPUk9ewmaq?usp=sharing)
+- **Live Vercel Frontend**: [https://e-com-bgo7.vercel.app/](https://e-com-bgo7.vercel.app/)
+- **Live Render Backend API**: [https://e-com-1-gdm0.onrender.com](https://e-com-1-gdm0.onrender.com)
+- **GitHub Repository**: [https://github.com/sasikumar-s123/e_COM](https://github.com/sasikumar-s123/e_COM)
+- **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/1KBvzwgmPf9r4ex1wnLu63SWjRo4gICnr?usp=sharing)
+- **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1Ath3eQR4S7maZEvpSINzaMmM6R4bwApG?usp=sharing)
 - **Admin Email**: `admin@gmail.com`
 - **Admin Password**: `admin123`
 
