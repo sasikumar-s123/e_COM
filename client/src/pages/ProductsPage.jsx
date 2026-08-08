@@ -49,25 +49,25 @@ const ProductsPage = () => {
       
       {/* Header */}
       <div style={{ marginBottom: '2.5rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fbbf24', marginBottom: '0.35rem' }}>
-          <Gem size={20} color="#fbbf24" />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '0.35rem' }}>
+          <Gem size={20} color="var(--primary)" />
           <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
-            LUMINA VAULT COLLECTION
+            ZENITH VAULT COLLECTION
           </span>
         </div>
-        <h1 style={{ fontSize: '2.8rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>Discover Lumina Catalog</h1>
+        <h1 style={{ fontSize: '2.8rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>Discover Zenith Catalog</h1>
       </div>
 
       {/* Filter & Controls Panel */}
-      <div className="glass-panel" style={{ padding: '1.75rem', marginBottom: '2.5rem', borderColor: 'rgba(245, 158, 11, 0.25)' }}>
+      <div className="panel" style={{ padding: '1.75rem', marginBottom: '2.5rem', borderColor: 'var(--border-color)' }}>
         <form onSubmit={handleSearchSubmit} style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
           
           {/* Search Bar */}
           <div style={{ flex: '1 1 280px', position: 'relative' }}>
-            <Search size={18} color="#fbbf24" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
+            <Search size={18} color="var(--primary)" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
             <input
               type="text"
-              placeholder="Search Lumina pieces by title, description, acoustic drivers..."
+              placeholder="Search Zenith pieces by title, description, acoustic drivers..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="glass-input"
@@ -81,10 +81,10 @@ const ProductsPage = () => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               className="glass-input"
-              style={{ background: 'rgba(7, 9, 14, 0.9)', cursor: 'pointer', color: '#fff' }}
+              style={{ background: 'var(--bg-main)', cursor: 'pointer', color: 'var(--text-main)' }}
             >
               {categories.map((cat) => (
-                <option key={cat} value={cat} style={{ background: '#07090e', color: '#fff' }}>
+                <option key={cat} value={cat} style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>
                   {cat === 'All' ? 'All Collections' : cat}
                 </option>
               ))}
@@ -97,10 +97,10 @@ const ProductsPage = () => {
               value={gender}
               onChange={(e) => setGender(e.target.value)}
               className="glass-input"
-              style={{ background: 'rgba(7, 9, 14, 0.9)', cursor: 'pointer', color: '#fff' }}
+              style={{ background: 'var(--bg-main)', cursor: 'pointer', color: 'var(--text-main)' }}
             >
               {genders.map((g) => (
-                <option key={g} value={g} style={{ background: '#07090e', color: '#fff' }}>
+                <option key={g} value={g} style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>
                   {g === 'All' ? 'All Genders' : g}
                 </option>
               ))}
@@ -113,12 +113,12 @@ const ProductsPage = () => {
               value={sort}
               onChange={(e) => setSort(e.target.value)}
               className="glass-input"
-              style={{ background: 'rgba(7, 9, 14, 0.9)', cursor: 'pointer', color: '#fff' }}
+              style={{ background: 'var(--bg-main)', cursor: 'pointer', color: 'var(--text-main)' }}
             >
-              <option value="newest" style={{ background: '#07090e', color: '#fff' }}>Newest Vault Additions</option>
-              <option value="price-low" style={{ background: '#07090e', color: '#fff' }}>Price: Low to High</option>
-              <option value="price-high" style={{ background: '#07090e', color: '#fff' }}>Price: High to Low</option>
-              <option value="rating" style={{ background: '#07090e', color: '#fff' }}>Highest Rated</option>
+              <option value="newest" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>Newest Vault Additions</option>
+              <option value="price-low" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>Price: Low to High</option>
+              <option value="price-high" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>Price: High to Low</option>
+              <option value="rating" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>Highest Rated</option>
             </select>
           </div>
 
@@ -128,18 +128,18 @@ const ProductsPage = () => {
       {/* Results Header Info */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
         <span style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-          Showing <strong style={{ color: '#fbbf24' }}>{products.length}</strong> Lumina pieces
+          Showing <strong style={{ color: 'var(--primary)' }}>{products.length}</strong> Zenith pieces
         </span>
       </div>
 
       {/* Grid */}
       {loading ? (
         <div style={{ display: 'flex', justifyContent: 'center', padding: '5rem 0', color: 'var(--text-muted)' }}>
-          Retrieving Lumina items...
+          Retrieving Zenith items...
         </div>
       ) : products.length === 0 ? (
-        <div className="glass-panel" style={{ padding: '4rem', textAlign: 'center' }}>
-          <h3 style={{ color: '#fff', marginBottom: '0.5rem', fontFamily: "'Cinzel', serif" }}>No Products Found</h3>
+        <div className="panel" style={{ padding: '4rem', textAlign: 'center' }}>
+          <h3 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)' }}>No Products Found</h3>
           <p style={{ color: 'var(--text-muted)' }}>Try adjusting your search query or category filters.</p>
         </div>
       ) : (

@@ -29,7 +29,7 @@ const CartPage = () => {
     setErrorMsg('');
 
     if (cartItems.length === 0) {
-      setErrorMsg('Your Lumina bag is empty');
+      setErrorMsg('Your Zenith bag is empty');
       return;
     }
 
@@ -71,15 +71,15 @@ const CartPage = () => {
   if (cartItems.length === 0) {
     return (
       <div className="container" style={{ paddingTop: '4rem', textAlign: 'center' }}>
-        <div className="glass-panel" style={{ padding: '4rem 2rem', maxWidth: '600px', margin: '0 auto', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-          <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'rgba(245, 158, 11, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', color: '#fbbf24' }}>
+        <div className="panel" style={{ padding: '4rem 2rem', maxWidth: '600px', margin: '0 auto', borderColor: 'var(--border-color)' }}>
+          <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'rgba(245, 158, 11, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', color: 'var(--primary)' }}>
             <Gem size={36} />
           </div>
-          <h2 style={{ color: '#fff', marginBottom: '0.75rem', fontFamily: "'Cinzel', serif" }}>Your Lumina Bag is Empty</h2>
+          <h2 style={{ color: 'var(--text-main)', marginBottom: '0.75rem', fontFamily: 'var(--font-heading)' }}>Your Zenith Bag is Empty</h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
             Discover our curated vault collection and select your signature pieces.
           </p>
-          <Link to="/products" className="glass-btn btn-primary" style={{ padding: '0.85rem 2rem', fontWeight: '800' }}>
+          <Link to="/products" className="btn-primary" style={{ padding: '0.85rem 2rem', fontWeight: '800' }}>
             Explore Catalog
           </Link>
         </div>
@@ -91,7 +91,7 @@ const CartPage = () => {
     <div className="container" style={{ paddingTop: '2.5rem' }}>
       
       <div style={{ marginBottom: '2.5rem' }}>
-        <h1 style={{ fontSize: '2.6rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>Lumina Bag & Checkout</h1>
+        <h1 style={{ fontSize: '2.6rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>Zenith Bag & Checkout</h1>
         <p style={{ color: 'var(--text-muted)' }}>Review your selected pieces and enter delivery details below.</p>
       </div>
 
@@ -104,9 +104,9 @@ const CartPage = () => {
         
         {/* Left Cart Items List */}
         <div>
-          <div className="glass-panel" style={{ padding: '1.75rem', marginBottom: '1.5rem', borderColor: 'rgba(245, 158, 11, 0.25)' }}>
-            <h3 style={{ color: '#fff', marginBottom: '1.25rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Cinzel', serif" }}>
-              <ShoppingBag size={20} color="#fbbf24" /> Selected Vault Items ({cartItems.length})
+          <div className="panel" style={{ padding: '1.75rem', marginBottom: '1.5rem', borderColor: 'var(--border-color)' }}>
+            <h3 style={{ color: 'var(--text-main)', marginBottom: '1.25rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-heading)' }}>
+              <ShoppingBag size={20} color="var(--primary)" /> Selected Vault Items ({cartItems.length})
             </h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -121,8 +121,8 @@ const CartPage = () => {
                     gap: '1rem',
                     padding: '1rem',
                     borderRadius: 'var(--radius-md)',
-                    background: 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid var(--border-glass)'
+                    background: 'var(--bg-hover)',
+                    border: '1px solid var(--border-color)'
                   }}>
                     <img
                       src={item.mainImg || p.mainImg}
@@ -131,10 +131,10 @@ const CartPage = () => {
                     />
 
                     <div style={{ flexGrow: 1 }}>
-                      <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.25rem', fontFamily: "'Cinzel', serif" }}>{item.title || p.title}</h4>
+                      <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.25rem', fontFamily: 'var(--font-heading)' }}>{item.title || p.title}</h4>
                       <div style={{ display: 'flex', gap: '0.85rem', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
-                        <span>Variant: <strong style={{ color: '#fbbf24' }}>{item.size || 'Standard'}</strong></span>
-                        <span>Price: <strong style={{ color: '#fbbf24', fontFamily: "'Cinzel', serif" }}>${unitPrice}</strong></span>
+                        <span>Variant: <strong style={{ color: 'var(--primary)' }}>{item.size || 'Standard'}</strong></span>
+                        <span>Price: <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>${unitPrice}</strong></span>
                       </div>
                     </div>
 
@@ -142,16 +142,16 @@ const CartPage = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <button
                         onClick={() => updateQuantity(item._id, item.quantity - 1)}
-                        style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid var(--border-glass)', color: '#fff', borderRadius: '6px', width: '28px', height: '28px', cursor: 'pointer' }}
+                        style={{ background: 'var(--bg-hover)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '6px', width: '28px', height: '28px', cursor: 'pointer' }}
                       >
                         -
                       </button>
-                      <span style={{ fontSize: '0.95rem', fontWeight: '800', color: '#fbbf24', width: '22px', textAlign: 'center' }}>
+                      <span style={{ fontSize: '0.95rem', fontWeight: '800', color: 'var(--primary)', width: '22px', textAlign: 'center' }}>
                         {item.quantity}
                       </span>
                       <button
                         onClick={() => updateQuantity(item._id, item.quantity + 1)}
-                        style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid var(--border-glass)', color: '#fff', borderRadius: '6px', width: '28px', height: '28px', cursor: 'pointer' }}
+                        style={{ background: 'var(--bg-hover)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '6px', width: '28px', height: '28px', cursor: 'pointer' }}
                       >
                         +
                       </button>
@@ -174,9 +174,9 @@ const CartPage = () => {
 
         {/* Right Checkout & Shipping Address Form */}
         <div>
-          <form onSubmit={handlePlaceOrder} className="glass-panel" style={{ padding: '1.85rem', borderColor: 'rgba(245, 158, 11, 0.25)' }}>
-            <h3 style={{ color: '#fff', marginBottom: '1.25rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: "'Cinzel', serif" }}>
-              <Truck size={20} color="#10b981" /> Delivery & Vault Security
+          <form onSubmit={handlePlaceOrder} className="panel" style={{ padding: '1.85rem', borderColor: 'var(--border-color)' }}>
+            <h3 style={{ color: 'var(--text-main)', marginBottom: '1.25rem', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-heading)' }}>
+              <Truck size={20} color="var(--secondary)" /> Delivery & Vault Security
             </h3>
 
             {errorMsg && (
@@ -262,8 +262,8 @@ const CartPage = () => {
                         padding: '0.65rem',
                         borderRadius: 'var(--radius-md)',
                         background: paymentMethod === method ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'rgba(255,255,255,0.05)',
-                        border: paymentMethod === method ? '1px solid #f59e0b' : '1px solid var(--border-glass)',
-                        color: paymentMethod === method ? '#07090e' : 'var(--text-muted)',
+                        border: paymentMethod === method ? '1px solid #f59e0b' : '1px solid var(--border-color)',
+                        color: paymentMethod === method ? 'var(--bg-main)' : 'var(--text-muted)',
                         fontWeight: '800',
                         fontSize: '0.85rem',
                         cursor: 'pointer'
@@ -277,28 +277,28 @@ const CartPage = () => {
             </div>
 
             {/* Order Summary Pricing Breakdown */}
-            <div style={{ borderTop: '1px solid var(--border-glass)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
+            <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', marginBottom: '0.5rem', fontSize: '0.9rem' }}>
                 <span>Pieces Subtotal</span>
-                <span style={{ fontFamily: "'Cinzel', serif" }}>${subtotal.toFixed(2)}</span>
+                <span style={{ fontFamily: 'var(--font-heading)' }}>${subtotal.toFixed(2)}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)', marginBottom: '0.75rem', fontSize: '0.9rem' }}>
                 <span>Express Courier Shipping</span>
-                <span>{shippingFee === 0 ? <span style={{ color: '#10b981', fontWeight: '800' }}>COMPLIMENTARY</span> : `$${shippingFee}`}</span>
+                <span>{shippingFee === 0 ? <span style={{ color: 'var(--secondary)', fontWeight: '800' }}>COMPLIMENTARY</span> : `$${shippingFee}`}</span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: '#fff', fontSize: '1.3rem', fontWeight: '900' }}>
-                <span style={{ fontFamily: "'Cinzel', serif" }}>Grand Vault Total</span>
-                <span style={{ color: '#fbbf24', fontFamily: "'Cinzel', serif" }}>${grandTotal}</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-main)', fontSize: '1.3rem', fontWeight: '900' }}>
+                <span style={{ fontFamily: 'var(--font-heading)' }}>Grand Vault Total</span>
+                <span style={{ color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>${grandTotal}</span>
               </div>
             </div>
 
             <button
               type="submit"
               disabled={submitting}
-              className="glass-btn btn-primary"
+              className="btn-primary"
               style={{ width: '100%', padding: '0.9rem', fontSize: '1rem', fontWeight: '800' }}
             >
-              {submitting ? 'Authenticating Order...' : 'Acquire Lumina Order'} <ArrowRight size={18} color="#07090e" />
+              {submitting ? 'Authenticating Order...' : 'Acquire Zenith Order'} <ArrowRight size={18} color="var(--text-inverse)" />
             </button>
           </form>
         </div>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use VITE_API_URL, production Render API, or local proxy /api
-const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://shopez-backend-2938.onrender.com' : '/api');
+const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://zenith-backend.onrender.com' : '/api');
 
 const API = axios.create({
   baseURL: API_BASE.endsWith('/api') ? API_BASE : `${API_BASE.replace(/\/$/, '')}/api`,
@@ -9,7 +9,7 @@ const API = axios.create({
 
 // Request interceptor to attach JWT token
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem('lumina_token') || localStorage.getItem('shopez_token');
+  const token = localStorage.getItem('zenith_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

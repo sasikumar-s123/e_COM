@@ -25,7 +25,7 @@ app.use('/api/admin', require('./routes/adminRoutes'));
 // Health & Root route
 app.get('/', (req, res) => {
   res.json({
-    message: 'LUMINA Luxury E-Commerce API Service is operational',
+    message: 'ZENITH E-Commerce API Service is operational',
     version: '2.0.0',
     adminLogin: 'admin@gmail.com / admin123',
     status: 'Healthy',
@@ -47,7 +47,7 @@ const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(`🚀 LUMINA Backend Server running on port: ${PORT}`);
+  console.log(`🚀 ZENITH Backend Server running on port: ${PORT}`);
   console.log(`👉 API Base URL: http://localhost:${PORT}`);
   console.log(`🔑 Admin Login: admin@gmail.com | Password: admin123`);
   console.log(`====================================================`);

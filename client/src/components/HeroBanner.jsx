@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Star, Flame, Zap, Shield, Crown } from 'lucide-react';
+import { ArrowRight, Clock, Star, Zap, Crown } from 'lucide-react';
 
 const bannerSlides = [
   {
@@ -93,12 +93,13 @@ const HeroBanner = () => {
       overflow: 'hidden',
       marginBottom: '3.5rem',
       minHeight: '520px',
-      border: '1px solid var(--border-glass)',
-      boxShadow: '0 25px 60px rgba(0, 0, 0, 0.75)',
+      border: '1px solid var(--border-color)',
+      boxShadow: 'var(--shadow-lg)',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      background: 'var(--bg-main)'
     }}>
-      {/* Background Image with Dynamic Fade */}
+      {/* Background Image */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -109,17 +110,16 @@ const HeroBanner = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transition: 'background-image 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
-        filter: 'brightness(0.5)'
       }} />
 
-      {/* Multi-stage Glass Gradient Mask */}
+      {/* Light Overlay to ensure text readability */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
         height: '100%',
-        background: 'linear-gradient(90deg, rgba(7, 9, 14, 0.95) 0%, rgba(7, 9, 14, 0.78) 55%, rgba(7, 9, 14, 0.35) 100%)'
+        background: 'linear-gradient(90deg, rgba(255,255,255, 0.95) 0%, rgba(255,255,255, 0.85) 55%, rgba(255,255,255, 0.4) 100%)'
       }} />
 
       {/* Content Inner Container */}
@@ -138,7 +138,7 @@ const HeroBanner = () => {
         <div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
             <span className="badge badge-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', padding: '0.4rem 0.9rem' }}>
-              <Crown size={14} color="#fbbf24" /> {slide.badge}
+              <Crown size={14} color="var(--primary)" /> {slide.badge}
             </span>
             <span className="badge badge-secondary" style={{ padding: '0.4rem 0.9rem' }}>
               {slide.discount}
@@ -149,17 +149,15 @@ const HeroBanner = () => {
             fontSize: '3.2rem',
             lineHeight: '1.15',
             marginBottom: '1.25rem',
-            color: '#fff',
-            fontWeight: '900',
-            letterSpacing: '0.02em',
-            fontFamily: "'Cinzel', serif",
-            textShadow: '0 4px 25px rgba(0,0,0,0.8)'
+            color: 'var(--text-main)',
+            fontWeight: '800',
+            fontFamily: "var(--font-heading)"
           }}>
             {slide.title}
           </h1>
 
           <p style={{
-            color: '#cbd5e1',
+            color: 'var(--text-muted)',
             fontSize: '1.15rem',
             marginBottom: '2rem',
             lineHeight: '1.6',
@@ -170,11 +168,11 @@ const HeroBanner = () => {
           </p>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
-            <Link to={slide.link} className="glass-btn btn-primary" style={{ padding: '1rem 2.25rem', fontSize: '1.05rem', fontWeight: '800' }}>
+            <Link to={slide.link} className="btn-primary glass-btn" style={{ padding: '1rem 2.25rem', fontSize: '1.05rem', fontWeight: '800', borderRadius: 'var(--radius-full)' }}>
               Acquire Piece <ArrowRight size={18} />
             </Link>
 
-            <Link to="/products" className="glass-btn btn-secondary" style={{ padding: '1rem 2.25rem', fontSize: '1.05rem' }}>
+            <Link to="/products" className="btn-secondary glass-btn" style={{ padding: '1rem 2.25rem', fontSize: '1.05rem', borderRadius: 'var(--radius-full)' }}>
               Explore Collection
             </Link>
           </div>
@@ -182,22 +180,23 @@ const HeroBanner = () => {
 
         {/* Right Column: Glass Product Feature Card & Timer */}
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <div className="glass-panel animate-fade-in" style={{
+          <div className="panel animate-fade-in" style={{
             padding: '1.85rem',
             maxWidth: '350px',
             width: '100%',
-            background: 'rgba(15, 23, 42, 0.9)',
-            border: '1px solid rgba(245, 158, 11, 0.3)',
-            boxShadow: '0 15px 40px rgba(0,0,0,0.6)'
+            background: 'var(--bg-card)',
+            border: '1px solid var(--border-color)',
+            boxShadow: 'var(--shadow-md)',
+            borderRadius: 'var(--radius-lg)'
           }}>
             
             {/* Rating */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.85rem' }}>
-              <span style={{ fontSize: '0.72rem', color: '#fbbf24', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              <span style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                 CURATED SPOTLIGHT
               </span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#fbbf24', fontSize: '0.85rem', fontWeight: '700' }}>
-                <Star size={14} fill="#fbbf24" color="#fbbf24" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--accent-amber)', fontSize: '0.85rem', fontWeight: '700' }}>
+                <Star size={14} fill="var(--accent-amber)" color="var(--accent-amber)" />
                 <span>{slide.rating}</span>
                 <span style={{ color: 'var(--text-dim)', fontSize: '0.75rem' }}>({slide.reviews})</span>
               </div>
@@ -205,7 +204,7 @@ const HeroBanner = () => {
 
             {/* Price Box */}
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <span style={{ fontSize: '2.1rem', fontWeight: '900', color: '#fff', fontFamily: "'Cinzel', serif" }}>
+              <span style={{ fontSize: '2.1rem', fontWeight: '900', color: 'var(--text-main)', fontFamily: "var(--font-heading)" }}>
                 {slide.price}
               </span>
               <span style={{ fontSize: '1.05rem', color: 'var(--text-dim)', textDecoration: 'line-through' }}>
@@ -215,34 +214,34 @@ const HeroBanner = () => {
 
             {/* Countdown Box */}
             <div style={{
-              background: 'rgba(7, 9, 14, 0.6)',
+              background: 'var(--bg-hover)',
               borderRadius: 'var(--radius-md)',
               padding: '0.85rem 1rem',
-              border: '1px solid var(--border-glass)',
+              border: '1px solid var(--border-color)',
               marginBottom: '1.25rem'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#10b981', fontSize: '0.75rem', fontWeight: '800', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--secondary)', fontSize: '0.75rem', fontWeight: '800', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 <Clock size={14} /> Private Drop Closes In:
               </div>
               
               <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'space-between', textAlign: 'center' }}>
-                <div style={{ background: 'rgba(255,255,255,0.06)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                  <span style={{ color: '#fbbf24', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>0{timeLeft.hours}</span>
+                <div style={{ background: 'var(--bg-card)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid var(--border-color)' }}>
+                  <span style={{ color: 'var(--text-main)', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>0{timeLeft.hours}</span>
                   <span style={{ color: 'var(--text-dim)', fontSize: '0.62rem', letterSpacing: '0.05em' }}>HOURS</span>
                 </div>
-                <div style={{ background: 'rgba(255,255,255,0.06)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                  <span style={{ color: '#fbbf24', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</span>
+                <div style={{ background: 'var(--bg-card)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid var(--border-color)' }}>
+                  <span style={{ color: 'var(--text-main)', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</span>
                   <span style={{ color: 'var(--text-dim)', fontSize: '0.62rem', letterSpacing: '0.05em' }}>MINS</span>
                 </div>
-                <div style={{ background: 'rgba(255,255,255,0.06)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                  <span style={{ color: '#fbbf24', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span>
+                <div style={{ background: 'var(--bg-card)', padding: '0.4rem 0.6rem', borderRadius: '6px', flex: 1, border: '1px solid var(--border-color)' }}>
+                  <span style={{ color: 'var(--text-main)', fontSize: '1.15rem', fontWeight: '900', display: 'block' }}>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span>
                   <span style={{ color: 'var(--text-dim)', fontSize: '0.62rem', letterSpacing: '0.05em' }}>SECS</span>
                 </div>
               </div>
             </div>
 
-            <Link to={slide.link} className="glass-btn btn-primary" style={{ width: '100%', padding: '0.8rem', fontSize: '0.92rem', fontWeight: '800' }}>
-              <Zap size={16} color="#07090e" /> Order Spotlight Drop
+            <Link to={slide.link} className="btn-primary glass-btn" style={{ width: '100%', padding: '0.8rem', fontSize: '0.92rem', fontWeight: '800', borderRadius: 'var(--radius-md)' }}>
+              <Zap size={16} color="var(--text-inverse)" /> Order Spotlight Drop
             </Link>
 
           </div>
@@ -267,7 +266,7 @@ const HeroBanner = () => {
               width: idx === currentSlide ? '36px' : '10px',
               height: '10px',
               borderRadius: 'var(--radius-full)',
-              background: idx === currentSlide ? '#f59e0b' : 'rgba(255, 255, 255, 0.25)',
+              background: idx === currentSlide ? 'var(--primary)' : 'rgba(0,0,0, 0.15)',
               transition: 'var(--transition)',
               border: 'none',
               cursor: 'pointer'

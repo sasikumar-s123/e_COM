@@ -45,7 +45,7 @@ const testimonials = [
     id: 1,
     name: 'Victoria Vance',
     role: 'Verified VIP Member',
-    comment: 'LUMINA provides an unparalleled online shopping experience! The Aura Acoustics arrived in handcrafted gold foil packaging within 24 hours.',
+    comment: 'ZENITH provides an unparalleled online shopping experience! The Aura Acoustics arrived in handcrafted gold foil packaging within 24 hours.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
   },
@@ -112,21 +112,21 @@ const HomePage = () => {
       <HeroBanner />
 
       {/* 2. Value Propositions Bar */}
-      <div className="glass-panel" style={{
+      <div className="panel" style={{
         padding: '2.25rem',
         marginBottom: '4.5rem',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
         gap: '2rem',
         background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(7, 9, 14, 0.95) 100%)',
-        borderColor: 'rgba(245, 158, 11, 0.25)'
+        borderColor: 'var(--border-color)'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-          <div style={{ padding: '0.85rem', borderRadius: '16px', background: 'rgba(245, 158, 11, 0.15)', color: '#fbbf24', boxShadow: '0 0 18px rgba(245,158,11,0.25)' }}>
+          <div style={{ padding: '0.85rem', borderRadius: '16px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--primary)', boxShadow: '0 0 18px rgba(245,158,11,0.25)' }}>
             <Truck size={28} />
           </div>
           <div>
-            <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.2rem', fontFamily: "'Cinzel', serif" }}>Express Delivery</h4>
+            <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)' }}>Express Delivery</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Complimentary express shipping on $150+</p>
           </div>
         </div>
@@ -136,7 +136,7 @@ const HomePage = () => {
             <ShieldCheck size={28} />
           </div>
           <div>
-            <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.2rem', fontFamily: "'Cinzel', serif" }}>256-Bit SSL Shield</h4>
+            <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)' }}>256-Bit SSL Shield</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Encrypted COD, Card & Digital Vault</p>
           </div>
         </div>
@@ -146,17 +146,17 @@ const HomePage = () => {
             <RefreshCw size={28} />
           </div>
           <div>
-            <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.2rem', fontFamily: "'Cinzel', serif" }}>30-Day Concierge Exchange</h4>
+            <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)' }}>30-Day Concierge Exchange</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Seamless money-back guarantee</p>
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-          <div style={{ padding: '0.85rem', borderRadius: '16px', background: 'rgba(251, 191, 36, 0.15)', color: '#fbbf24', boxShadow: '0 0 18px rgba(251,191,36,0.25)' }}>
+          <div style={{ padding: '0.85rem', borderRadius: '16px', background: 'rgba(251, 191, 36, 0.15)', color: 'var(--primary)', boxShadow: '0 0 18px rgba(251,191,36,0.25)' }}>
             <Zap size={28} />
           </div>
           <div>
-            <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.2rem', fontFamily: "'Cinzel', serif" }}>1-Click Instant Order</h4>
+            <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)' }}>1-Click Instant Order</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Instant checkout flow to confirmation</p>
           </div>
         </div>
@@ -165,13 +165,13 @@ const HomePage = () => {
       {/* 3. Category Grid Showcase */}
       <div style={{ marginBottom: '4.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#fbbf24', marginBottom: '0.4rem' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '0.4rem' }}>
             <Sparkles size={18} />
             <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
               CURATED COLLECTIONS
             </span>
           </div>
-          <h2 style={{ fontSize: '2.5rem', color: '#fff', fontWeight: '900', fontFamily: "'Cinzel', serif" }}>Explore Luxury Categories</h2>
+          <h2 style={{ fontSize: '2.5rem', color: 'var(--text-main)', fontWeight: '900', fontFamily: 'var(--font-heading)' }}>Explore Luxury Categories</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1rem', marginTop: '0.5rem' }}>
             Discover handpicked modern essentials engineered for refined living.
           </p>
@@ -236,7 +236,7 @@ const HomePage = () => {
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.45rem', color: '#fff', fontWeight: '800', marginBottom: '0.4rem', fontFamily: "'Cinzel', serif" }}>
+                <h3 style={{ fontSize: '1.45rem', color: 'var(--text-main)', fontWeight: '800', marginBottom: '0.4rem', fontFamily: 'var(--font-heading)' }}>
                   {cat.name}
                 </h3>
                 
@@ -244,7 +244,7 @@ const HomePage = () => {
                   {cat.desc}
                 </p>
 
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#fbbf24', fontWeight: '800', fontSize: '0.85rem' }}>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--primary)', fontWeight: '800', fontSize: '0.85rem' }}>
                   View Collection <ArrowRight size={15} />
                 </div>
               </div>
@@ -256,21 +256,21 @@ const HomePage = () => {
       {/* 4. Flash Deals Spotlight Banner */}
       {flashDeals.length > 0 && (
         <div style={{ marginBottom: '4.5rem' }}>
-          <div className="glass-panel" style={{
+          <div className="panel" style={{
             padding: '2.5rem',
             background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(16, 185, 129, 0.12) 100%)',
-            borderColor: 'rgba(245, 158, 11, 0.35)'
+            borderColor: 'var(--border-color)'
           }}>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '2rem' }}>
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fbbf24', marginBottom: '0.25rem' }}>
-                  <Crown size={20} color="#fbbf24" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '0.25rem' }}>
+                  <Crown size={20} color="var(--primary)" />
                   <span style={{ fontSize: '0.85rem', fontWeight: '800', letterSpacing: '0.12em' }}>PRIVATE DROP OFFERS</span>
                 </div>
-                <h2 style={{ fontSize: '2.3rem', color: '#fff', fontWeight: '900', fontFamily: "'Cinzel', serif" }}>Limited Spotlight Discounts</h2>
+                <h2 style={{ fontSize: '2.3rem', color: 'var(--text-main)', fontWeight: '900', fontFamily: 'var(--font-heading)' }}>Limited Spotlight Discounts</h2>
               </div>
 
-              <Link to="/products" className="glass-btn btn-primary" style={{ padding: '0.75rem 1.75rem', fontSize: '0.9rem', fontWeight: '800' }}>
+              <Link to="/products" className="btn-primary" style={{ padding: '0.75rem 1.75rem', fontSize: '0.9rem', fontWeight: '800' }}>
                 View All Drops <ArrowRight size={16} />
               </Link>
             </div>
@@ -292,13 +292,13 @@ const HomePage = () => {
       <div style={{ marginBottom: '4.5rem' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '2rem' }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#10b981', marginBottom: '0.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', marginBottom: '0.25rem' }}>
               <Award size={18} />
               <span style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
                 LIVE VAULT CATALOG
               </span>
             </div>
-            <h2 style={{ fontSize: '2.3rem', color: '#fff', fontWeight: '900', fontFamily: "'Cinzel', serif" }}>Featured Lumina Showcase</h2>
+            <h2 style={{ fontSize: '2.3rem', color: 'var(--text-main)', fontWeight: '900', fontFamily: 'var(--font-heading)' }}>Featured Zenith Showcase</h2>
           </div>
 
           {/* Filter Pills */}
@@ -312,9 +312,9 @@ const HomePage = () => {
                   padding: '0.55rem 1.25rem',
                   fontSize: '0.9rem',
                   background: selectedCategory === cat ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'rgba(255, 255, 255, 0.05)',
-                  color: selectedCategory === cat ? '#07090e' : 'var(--text-muted)',
+                  color: selectedCategory === cat ? 'var(--bg-main)' : 'var(--text-muted)',
                   fontWeight: selectedCategory === cat ? '800' : '500',
-                  borderColor: selectedCategory === cat ? '#f59e0b' : 'var(--border-glass)',
+                  borderColor: selectedCategory === cat ? '#f59e0b' : 'var(--border-color)',
                   boxShadow: selectedCategory === cat ? '0 0 16px var(--primary-glow)' : 'none'
                 }}
               >
@@ -326,7 +326,7 @@ const HomePage = () => {
 
         {loading ? (
           <div style={{ display: 'flex', justifyContent: 'center', padding: '5rem 0', color: 'var(--text-muted)' }}>
-            Loading Lumina vault pieces...
+            Loading Zenith vault pieces...
           </div>
         ) : (
           <div style={{
@@ -341,8 +341,8 @@ const HomePage = () => {
         )}
 
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <Link to="/products" className="glass-btn btn-secondary" style={{ padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: '800' }}>
-            Browse Complete Lumina Catalog <ArrowRight size={18} />
+          <Link to="/products" className="btn-secondary" style={{ padding: '0.9rem 2.5rem', fontSize: '1rem', fontWeight: '800' }}>
+            Browse Complete Zenith Catalog <ArrowRight size={18} />
           </Link>
         </div>
       </div>
@@ -350,11 +350,11 @@ const HomePage = () => {
       {/* 6. Customer Testimonials Section */}
       <div style={{ marginBottom: '4.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#fbbf24', marginBottom: '0.4rem' }}>
-            <Gem size={18} color="#fbbf24" />
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '0.4rem' }}>
+            <Gem size={18} color="var(--primary)" />
             <span style={{ fontSize: '0.85rem', fontWeight: '800', letterSpacing: '0.12em' }}>VIP REVIEWS</span>
           </div>
-          <h2 style={{ fontSize: '2.3rem', color: '#fff', fontWeight: '900', fontFamily: "'Cinzel', serif" }}>Patron Testimonials</h2>
+          <h2 style={{ fontSize: '2.3rem', color: 'var(--text-main)', fontWeight: '900', fontFamily: 'var(--font-heading)' }}>Patron Testimonials</h2>
         </div>
 
         <div style={{
@@ -363,11 +363,11 @@ const HomePage = () => {
           gap: '1.75rem'
         }}>
           {testimonials.map((t) => (
-            <div key={t.id} className="glass-panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderTop: '2px solid rgba(245, 158, 11, 0.3)' }}>
+            <div key={t.id} className="panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderTop: '2px solid rgba(245, 158, 11, 0.3)' }}>
               <div>
-                <div style={{ display: 'flex', gap: '0.25rem', color: '#fbbf24', marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', gap: '0.25rem', color: 'var(--primary)', marginBottom: '1rem' }}>
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} size={16} fill="#fbbf24" color="#fbbf24" />
+                    <Star key={i} size={16} fill="var(--primary)" color="var(--primary)" />
                   ))}
                 </div>
                 <p style={{ color: '#cbd5e1', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem', fontStyle: 'italic' }}>
@@ -375,11 +375,11 @@ const HomePage = () => {
                 </p>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', borderTop: '1px solid var(--border-glass)', paddingTop: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>
                 <img src={t.avatar} alt={t.name} style={{ width: '46px', height: '46px', borderRadius: '50%', objectFit: 'cover', border: '1px solid #f59e0b' }} />
                 <div>
-                  <h4 style={{ color: '#fff', fontSize: '0.95rem', fontWeight: '700', fontFamily: "'Cinzel', serif" }}>{t.name}</h4>
-                  <span style={{ fontSize: '0.75rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                  <h4 style={{ color: 'var(--text-main)', fontSize: '0.95rem', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>{t.name}</h4>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--secondary)', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
                     <CheckCircle2 size={12} /> {t.role}
                   </span>
                 </div>
@@ -390,26 +390,26 @@ const HomePage = () => {
       </div>
 
       {/* 7. Newsletter Subscription Section */}
-      <div className="glass-panel" style={{
+      <div className="panel" style={{
         padding: '3.5rem 2.5rem',
         textAlign: 'center',
         background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(16, 185, 129, 0.18) 100%)',
-        borderColor: 'rgba(245, 158, 11, 0.4)',
+        borderColor: 'var(--border-color)',
         position: 'relative',
         overflow: 'hidden'
       }}>
         <div style={{ maxWidth: '620px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
           <span className="badge badge-primary" style={{ marginBottom: '1rem' }}>INSIDER ACCESS</span>
-          <h2 style={{ fontSize: '2.4rem', color: '#fff', fontWeight: '900', marginBottom: '0.75rem', fontFamily: "'Cinzel', serif" }}>
+          <h2 style={{ fontSize: '2.4rem', color: 'var(--text-main)', fontWeight: '900', marginBottom: '0.75rem', fontFamily: 'var(--font-heading)' }}>
             Subscribe & Enjoy 15% Off Your Order
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '2rem' }}>
-            Join the Lumina VIP circle for instant promo vouchers, secret vault releases, and private drop invites directly in your inbox.
+            Join the Zenith VIP circle for instant promo vouchers, secret vault releases, and private drop invites directly in your inbox.
           </p>
 
           {subscribed ? (
             <div className="badge badge-success animate-fade-in" style={{ padding: '0.85rem 1.5rem', fontSize: '0.95rem', margin: '0 auto', background: 'rgba(16, 185, 129, 0.25)', color: '#6ee7b7' }}>
-              <CheckCircle2 size={18} /> Thank you for joining! Your 15% promo voucher code is <strong style={{ color: '#fff', marginLeft: '0.3rem' }}>LUMINA2026</strong>
+              <CheckCircle2 size={18} /> Thank you for joining! Your 15% promo voucher code is <strong style={{ color: 'var(--text-main)', marginLeft: '0.3rem' }}>ZENITH2026</strong>
             </div>
           ) : (
             <form onSubmit={handleSubscribe} style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
@@ -422,8 +422,8 @@ const HomePage = () => {
                 className="glass-input"
                 style={{ flex: '1 1 280px', padding: '0.85rem 1.25rem' }}
               />
-              <button type="submit" className="glass-btn btn-primary" style={{ padding: '0.85rem 1.75rem', fontWeight: '800' }}>
-                Join VIP Circle <Send size={16} color="#07090e" />
+              <button type="submit" className="btn-primary" style={{ padding: '0.85rem 1.75rem', fontWeight: '800' }}>
+                Join VIP Circle <Send size={16} color="var(--text-inverse)" />
               </button>
             </form>
           )}

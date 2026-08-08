@@ -97,7 +97,7 @@ const AdminDashboard = () => {
 
       await createProductApi(payload);
       setShowAddProductModal(false);
-      setActionMsg('New Lumina item added to store catalog successfully');
+      setActionMsg('New Zenith item added to store catalog successfully');
       setTimeout(() => setActionMsg(''), 3000);
 
       // Reset & Reload
@@ -163,13 +163,13 @@ const AdminDashboard = () => {
       {/* Header Banner */}
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', marginBottom: '2rem' }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#10b981', marginBottom: '0.25rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', marginBottom: '0.25rem' }}>
             <ShieldCheck size={20} />
             <span style={{ fontSize: '0.85rem', fontWeight: '800', letterSpacing: '0.12em' }}>
               ADMINISTRATOR MANAGEMENT CONSOLE
             </span>
           </div>
-          <h1 style={{ fontSize: '2.6rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>LUMINA Administrative Suite</h1>
+          <h1 style={{ fontSize: '2.6rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>ZENITH Administrative Suite</h1>
         </div>
 
         <div className="badge badge-secondary" style={{ padding: '0.6rem 1rem', fontSize: '0.85rem' }}>
@@ -184,14 +184,14 @@ const AdminDashboard = () => {
       )}
 
       {/* Navigation Tabs */}
-      <div className="glass-panel" style={{ padding: '0.5rem', marginBottom: '2rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
+      <div className="panel" style={{ padding: '0.5rem', marginBottom: '2rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', borderColor: 'var(--border-color)' }}>
         <button
           onClick={() => setActiveTab('overview')}
           className="glass-btn"
           style={{
             flex: 1,
             background: activeTab === 'overview' ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'transparent',
-            color: activeTab === 'overview' ? '#07090e' : '#fff',
+            color: activeTab === 'overview' ? 'var(--bg-main)' : 'var(--text-main)',
             fontWeight: activeTab === 'overview' ? '800' : '500',
             border: 'none',
             fontSize: '0.9rem'
@@ -206,7 +206,7 @@ const AdminDashboard = () => {
           style={{
             flex: 1,
             background: activeTab === 'products' ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'transparent',
-            color: activeTab === 'products' ? '#07090e' : '#fff',
+            color: activeTab === 'products' ? 'var(--bg-main)' : 'var(--text-main)',
             fontWeight: activeTab === 'products' ? '800' : '500',
             border: 'none',
             fontSize: '0.9rem'
@@ -221,7 +221,7 @@ const AdminDashboard = () => {
           style={{
             flex: 1,
             background: activeTab === 'users' ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'transparent',
-            color: activeTab === 'users' ? '#07090e' : '#fff',
+            color: activeTab === 'users' ? 'var(--bg-main)' : 'var(--text-main)',
             fontWeight: activeTab === 'users' ? '800' : '500',
             border: 'none',
             fontSize: '0.9rem'
@@ -236,7 +236,7 @@ const AdminDashboard = () => {
           style={{
             flex: 1,
             background: activeTab === 'orders' ? 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)' : 'transparent',
-            color: activeTab === 'orders' ? '#07090e' : '#fff',
+            color: activeTab === 'orders' ? 'var(--bg-main)' : 'var(--text-main)',
             fontWeight: activeTab === 'orders' ? '800' : '500',
             border: 'none',
             fontSize: '0.9rem'
@@ -251,54 +251,54 @@ const AdminDashboard = () => {
         <div>
           {/* Key Metrics Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
-            <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-              <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(245, 158, 11, 0.15)', color: '#fbbf24' }}>
+            <div className="panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'var(--border-color)' }}>
+              <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--primary)' }}>
                 <DollarSign size={32} />
               </div>
               <div>
                 <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Total Revenue</span>
-                <h3 style={{ fontSize: '1.8rem', color: '#fbbf24', fontFamily: "'Cinzel', serif" }}>${stats?.totalRevenue?.toFixed(2) || '0.00'}</h3>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>${stats?.totalRevenue?.toFixed(2) || '0.00'}</h3>
               </div>
             </div>
 
-            <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(16, 185, 129, 0.3)' }}>
+            <div className="panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(16, 185, 129, 0.3)' }}>
               <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(16, 185, 129, 0.15)', color: '#6ee7b7' }}>
                 <ShoppingBag size={32} />
               </div>
               <div>
                 <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Total Orders</span>
-                <h3 style={{ fontSize: '1.8rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>{stats?.totalOrders || ordersList.length}</h3>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>{stats?.totalOrders || ordersList.length}</h3>
               </div>
             </div>
 
-            <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(6, 182, 212, 0.3)' }}>
+            <div className="panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(6, 182, 212, 0.3)' }}>
               <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(6, 182, 212, 0.15)', color: '#22d3ee' }}>
                 <Package size={32} />
               </div>
               <div>
                 <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Catalog Pieces</span>
-                <h3 style={{ fontSize: '1.8rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>{stats?.totalProducts || products.length}</h3>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>{stats?.totalProducts || products.length}</h3>
               </div>
             </div>
 
-            <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(251, 191, 36, 0.3)' }}>
-              <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(251, 191, 36, 0.15)', color: '#fbbf24' }}>
+            <div className="panel" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem', borderColor: 'rgba(251, 191, 36, 0.3)' }}>
+              <div style={{ padding: '1rem', borderRadius: '16px', background: 'rgba(251, 191, 36, 0.15)', color: 'var(--primary)' }}>
                 <Users size={32} />
               </div>
               <div>
                 <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Registered Patrons</span>
-                <h3 style={{ fontSize: '1.8rem', color: '#fff', fontFamily: "'Cinzel', serif" }}>{stats?.totalUsers || usersList.length}</h3>
+                <h3 style={{ fontSize: '1.8rem', color: 'var(--text-main)', fontFamily: 'var(--font-heading)' }}>{stats?.totalUsers || usersList.length}</h3>
               </div>
             </div>
           </div>
 
           {/* Recent Orders Overview */}
-          <div className="glass-panel" style={{ padding: '1.75rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-            <h3 style={{ color: '#fff', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: "'Cinzel', serif" }}>Recent Lumina Submissions</h3>
+          <div className="panel" style={{ padding: '1.75rem', borderColor: 'var(--border-color)' }}>
+            <h3 style={{ color: 'var(--text-main)', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: 'var(--font-heading)' }}>Recent Zenith Submissions</h3>
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid var(--border-glass)', color: '#fff' }}>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-main)' }}>
                     <th style={{ padding: '0.75rem' }}>Order ID</th>
                     <th style={{ padding: '0.75rem' }}>Patron</th>
                     <th style={{ padding: '0.75rem' }}>Total</th>
@@ -309,9 +309,9 @@ const AdminDashboard = () => {
                 <tbody>
                   {ordersList.slice(0, 5).map((ord) => (
                     <tr key={ord._id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                      <td style={{ padding: '0.75rem', color: '#fbbf24' }}>#{ord._id.substring(ord._id.length - 8)}</td>
-                      <td style={{ padding: '0.75rem', color: '#fff' }}>{ord.name}</td>
-                      <td style={{ padding: '0.75rem', color: '#fbbf24', fontWeight: '700', fontFamily: "'Cinzel', serif" }}>${ord.totalAmount?.toFixed(2)}</td>
+                      <td style={{ padding: '0.75rem', color: 'var(--primary)' }}>#{ord._id.substring(ord._id.length - 8)}</td>
+                      <td style={{ padding: '0.75rem', color: 'var(--text-main)' }}>{ord.name}</td>
+                      <td style={{ padding: '0.75rem', color: 'var(--primary)', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>${ord.totalAmount?.toFixed(2)}</td>
                       <td style={{ padding: '0.75rem' }}>{ord.paymentMethod}</td>
                       <td style={{ padding: '0.75rem' }}>
                         <span className="badge badge-primary">{ord.status}</span>
@@ -329,9 +329,9 @@ const AdminDashboard = () => {
       {activeTab === 'products' && (
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-            <h3 style={{ color: '#fff', fontSize: '1.25rem', fontFamily: "'Cinzel', serif" }}>Manage Lumina Vault Catalog</h3>
-            <button onClick={() => setShowAddProductModal(true)} className="glass-btn btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.9rem', fontWeight: '800' }}>
-              <Plus size={16} color="#07090e" /> Add New Lumina Item
+            <h3 style={{ color: 'var(--text-main)', fontSize: '1.25rem', fontFamily: 'var(--font-heading)' }}>Manage Zenith Vault Catalog</h3>
+            <button onClick={() => setShowAddProductModal(true)} className="btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.9rem', fontWeight: '800' }}>
+              <Plus size={16} color="var(--text-inverse)" /> Add New Zenith Item
             </button>
           </div>
 
@@ -351,10 +351,10 @@ const AdminDashboard = () => {
               justifyContent: 'center',
               padding: '1.5rem'
             }}>
-              <div className="glass-panel" style={{ width: '100%', maxWidth: '600px', padding: '2rem', maxHeight: '90vh', overflowY: 'auto', borderColor: 'rgba(245, 158, 11, 0.4)' }}>
+              <div className="panel" style={{ width: '100%', maxWidth: '600px', padding: '2rem', maxHeight: '90vh', overflowY: 'auto', borderColor: 'var(--border-color)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                  <h3 style={{ color: '#fff', fontSize: '1.3rem', fontFamily: "'Cinzel', serif" }}>Add New Lumina Piece</h3>
-                  <button onClick={() => setShowAddProductModal(false)} style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer' }}>
+                  <h3 style={{ color: 'var(--text-main)', fontSize: '1.3rem', fontFamily: 'var(--font-heading)' }}>Add New Zenith Piece</h3>
+                  <button onClick={() => setShowAddProductModal(false)} style={{ background: 'transparent', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }}>
                     <X size={20} />
                   </button>
                 </div>
@@ -373,7 +373,7 @@ const AdminDashboard = () => {
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div>
                       <label style={{ display: 'block', color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '0.3rem' }}>Category *</label>
-                      <select value={newProduct.category} onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })} className="glass-input" style={{ background: '#07090e', color: '#fff' }}>
+                      <select value={newProduct.category} onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })} className="glass-input" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>
                         <option value="Electronics">Electronics</option>
                         <option value="Fashion">Fashion</option>
                         <option value="Footwear">Footwear</option>
@@ -383,7 +383,7 @@ const AdminDashboard = () => {
 
                     <div>
                       <label style={{ display: 'block', color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '0.3rem' }}>Gender Target</label>
-                      <select value={newProduct.gender} onChange={(e) => setNewProduct({ ...newProduct, gender: e.target.value })} className="glass-input" style={{ background: '#07090e', color: '#fff' }}>
+                      <select value={newProduct.gender} onChange={(e) => setNewProduct({ ...newProduct, gender: e.target.value })} className="glass-input" style={{ background: 'var(--bg-main)', color: 'var(--text-main)' }}>
                         <option value="Unisex">Unisex</option>
                         <option value="Men">Men</option>
                         <option value="Women">Women</option>
@@ -414,8 +414,8 @@ const AdminDashboard = () => {
                     <input type="text" value={newProduct.mainImg} onChange={(e) => setNewProduct({ ...newProduct, mainImg: e.target.value })} className="glass-input" />
                   </div>
 
-                  <button type="submit" className="glass-btn btn-primary" style={{ padding: '0.8rem', marginTop: '0.5rem', fontWeight: '800' }}>
-                    Save Product to Lumina Catalog
+                  <button type="submit" className="btn-primary" style={{ padding: '0.8rem', marginTop: '0.5rem', fontWeight: '800' }}>
+                    Save Product to Zenith Catalog
                   </button>
                 </form>
               </div>
@@ -423,11 +423,11 @@ const AdminDashboard = () => {
           )}
 
           {/* Product Grid Table */}
-          <div className="glass-panel" style={{ padding: '1.5rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
+          <div className="panel" style={{ padding: '1.5rem', borderColor: 'var(--border-color)' }}>
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 <thead>
-                  <tr style={{ borderBottom: '1px solid var(--border-glass)', color: '#fff' }}>
+                  <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-main)' }}>
                     <th style={{ padding: '0.75rem' }}>Item</th>
                     <th style={{ padding: '0.75rem' }}>Category</th>
                     <th style={{ padding: '0.75rem' }}>Price</th>
@@ -438,12 +438,12 @@ const AdminDashboard = () => {
                 <tbody>
                   {products.map((p) => (
                     <tr key={p._id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                      <td style={{ padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#fff' }}>
+                      <td style={{ padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-main)' }}>
                         <img src={p.mainImg} alt={p.title} style={{ width: '42px', height: '42px', borderRadius: '8px', objectFit: 'cover' }} />
                         <span style={{ fontWeight: '600' }}>{p.title}</span>
                       </td>
                       <td style={{ padding: '0.75rem' }}>{p.category}</td>
-                      <td style={{ padding: '0.75rem', color: '#fbbf24', fontWeight: '700', fontFamily: "'Cinzel', serif" }}>${p.price}</td>
+                      <td style={{ padding: '0.75rem', color: 'var(--primary)', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>${p.price}</td>
                       <td style={{ padding: '0.75rem' }}>{p.stock}</td>
                       <td style={{ padding: '0.75rem' }}>
                         <button onClick={() => handleDeleteProduct(p._id)} style={{ background: 'transparent', border: 'none', color: '#f87171', cursor: 'pointer' }}>
@@ -461,12 +461,12 @@ const AdminDashboard = () => {
 
       {/* Tab Content 3: User Management */}
       {activeTab === 'users' && (
-        <div className="glass-panel" style={{ padding: '1.75rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-          <h3 style={{ color: '#fff', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: "'Cinzel', serif" }}>Registered Lumina Patrons</h3>
+        <div className="panel" style={{ padding: '1.75rem', borderColor: 'var(--border-color)' }}>
+          <h3 style={{ color: 'var(--text-main)', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: 'var(--font-heading)' }}>Registered Zenith Patrons</h3>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid var(--border-glass)', color: '#fff' }}>
+                <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-main)' }}>
                   <th style={{ padding: '0.75rem' }}>Name</th>
                   <th style={{ padding: '0.75rem' }}>Email</th>
                   <th style={{ padding: '0.75rem' }}>Role</th>
@@ -477,7 +477,7 @@ const AdminDashboard = () => {
               <tbody>
                 {usersList.map((u) => (
                   <tr key={u._id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '0.75rem', color: '#fff', fontWeight: '600' }}>{u.name}</td>
+                    <td style={{ padding: '0.75rem', color: 'var(--text-main)', fontWeight: '600' }}>{u.name}</td>
                     <td style={{ padding: '0.75rem' }}>{u.email}</td>
                     <td style={{ padding: '0.75rem' }}>
                       <span className={`badge ${u.userType === 'admin' ? 'badge-secondary' : 'badge-primary'}`}>
@@ -502,12 +502,12 @@ const AdminDashboard = () => {
 
       {/* Tab Content 4: Orders Management */}
       {activeTab === 'orders' && (
-        <div className="glass-panel" style={{ padding: '1.75rem', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-          <h3 style={{ color: '#fff', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: "'Cinzel', serif" }}>Manage Customer Orders</h3>
+        <div className="panel" style={{ padding: '1.75rem', borderColor: 'var(--border-color)' }}>
+          <h3 style={{ color: 'var(--text-main)', marginBottom: '1.25rem', fontSize: '1.2rem', fontFamily: 'var(--font-heading)' }}>Manage Customer Orders</h3>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid var(--border-glass)', color: '#fff' }}>
+                <tr style={{ borderBottom: '1px solid var(--border-color)', color: 'var(--text-main)' }}>
                   <th style={{ padding: '0.75rem' }}>Order ID</th>
                   <th style={{ padding: '0.75rem' }}>Patron Details</th>
                   <th style={{ padding: '0.75rem' }}>Items</th>
@@ -518,8 +518,8 @@ const AdminDashboard = () => {
               <tbody>
                 {ordersList.map((ord) => (
                   <tr key={ord._id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '0.75rem', color: '#fbbf24' }}>#{ord._id.substring(ord._id.length - 8)}</td>
-                    <td style={{ padding: '0.75rem', color: '#fff' }}>
+                    <td style={{ padding: '0.75rem', color: 'var(--primary)' }}>#{ord._id.substring(ord._id.length - 8)}</td>
+                    <td style={{ padding: '0.75rem', color: 'var(--text-main)' }}>
                       <div>{ord.name}</div>
                       <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>{ord.mobile} | {ord.pincode}</span>
                     </td>
@@ -528,13 +528,13 @@ const AdminDashboard = () => {
                         <div key={idx} style={{ fontSize: '0.8rem' }}>• {it.title} (x{it.quantity})</div>
                       ))}
                     </td>
-                    <td style={{ padding: '0.75rem', color: '#fbbf24', fontWeight: '700', fontFamily: "'Cinzel', serif" }}>${ord.totalAmount?.toFixed(2)}</td>
+                    <td style={{ padding: '0.75rem', color: 'var(--primary)', fontWeight: '700', fontFamily: 'var(--font-heading)' }}>${ord.totalAmount?.toFixed(2)}</td>
                     <td style={{ padding: '0.75rem' }}>
                       <select
                         value={ord.status}
                         onChange={(e) => handleOrderStatusChange(ord._id, e.target.value)}
                         className="glass-input"
-                        style={{ padding: '0.3rem 0.6rem', fontSize: '0.85rem', background: '#07090e', color: '#fff' }}
+                        style={{ padding: '0.3rem 0.6rem', fontSize: '0.85rem', background: 'var(--bg-main)', color: 'var(--text-main)' }}
                       >
                         <option value="Placed">Placed</option>
                         <option value="Processing">Processing</option>
