@@ -11,7 +11,7 @@
 > - ⚡ **Live Render Backend API**: [https://e-com-1-gdm0.onrender.com](https://e-com-1-gdm0.onrender.com)
 > - 📦 **GitHub Repository**: [https://github.com/sasikumar-s123/e_COM](https://github.com/sasikumar-s123/e_COM)
 > - 🎥 **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/1KBvzwgmPf9r4ex1wnLu63SWjRo4gICnr?usp=sharing)
-> - 📄 **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1Ath3eQR4S7maZEvpSINzaMmM6R4bwApG?usp=sharing)
+> - 📄 **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1BFIiF3w1a9VIm-VFZG_RbjN1RUNGYxmN?usp=sharing)
 > - 🔑 **Pre-configured Admin Account**:
 >   - **Account Email**: `admin@gmail.com`
 >   - **Password**: `admin123`
@@ -244,7 +244,7 @@ npm run dev
 - **Live Render Backend API**: [https://e-com-1-gdm0.onrender.com](https://e-com-1-gdm0.onrender.com)
 - **GitHub Repository**: [https://github.com/sasikumar-s123/e_COM](https://github.com/sasikumar-s123/e_COM)
 - **Project Video**: [Google Drive Folder](https://drive.google.com/drive/folders/1KBvzwgmPf9r4ex1wnLu63SWjRo4gICnr?usp=sharing)
-- **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1Ath3eQR4S7maZEvpSINzaMmM6R4bwApG?usp=sharing)
+- **Project Documentation**: [Google Drive Folder](https://drive.google.com/drive/folders/1BFIiF3w1a9VIm-VFZG_RbjN1RUNGYxmN?usp=sharing)
 - **Admin Email**: `admin@gmail.com`
 - **Admin Password**: `admin123`
 
